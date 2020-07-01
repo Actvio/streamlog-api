@@ -19,4 +19,7 @@ gem 'jwt'
 gem 'simple_command'
 
 # Use ActiveStorage variant
-# gem 'mini_magick
+# gem 'mini_magick', '~> 4.8'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :develo
