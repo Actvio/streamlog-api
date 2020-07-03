@@ -26,4 +26,7 @@ gem 'simple_command'
 
 gem 'rest-client'
 
-# Reduces boot times through caching; required in config
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
+# Use Rack CORS for handling Cross-Origin Resou
