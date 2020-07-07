@@ -37,3 +37,8 @@ gem 'paranoia', '~> 2.2'
 
 gem 'google-id-token'
 
+# Authentication
+gem 'omniauth-google-oauth2'
+
+group :development, :test do
+  #
