@@ -45,4 +45,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'awesome_print'
-  gem 'rs
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+end
+
+group :development do
+  gem '
