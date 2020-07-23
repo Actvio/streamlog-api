@@ -13,4 +13,6 @@ https://docs.docker.com/v17.09/engine/installation
 
 3. In the directory of the repo, run `./run`. You may need to run `chmod +x run` before the first run.
 
-4. Run tests wtith `./tests`. You may need to run `chmod +x test
+4. Run tests wtith `./tests`. You may need to run `chmod +x tests` first
+
+# Thanks!
