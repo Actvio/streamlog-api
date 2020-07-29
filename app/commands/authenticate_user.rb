@@ -6,4 +6,7 @@ class AuthenticateUser
     @valid_user_auth = valid_user_auth
   end
 
-  d
+  def call
+    return invalid_credentials if @valid_user_auth.blank?
+
+    auth_token = JsonWe
