@@ -9,4 +9,5 @@ class AuthenticateUser
   def call
     return invalid_credentials if @valid_user_auth.blank?
 
-    auth_token = JsonWe
+    auth_token = JsonWebToken.encode(user_id: @user.id)
+    return { auth_token: auth_token, user: @user.as_
