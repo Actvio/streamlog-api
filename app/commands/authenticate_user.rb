@@ -16,4 +16,8 @@ class AuthenticateUser
   private
 
   def invalid_credentials
-    errors.add :user_authentication, 'invalid 
+    errors.add :user_authentication, 'invalid credentials'
+
+    raise 'Auth failed'
+  end
+end
