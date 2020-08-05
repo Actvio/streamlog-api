@@ -23,4 +23,6 @@ class AuthorizeApiRequest
   end
 
   def http_auth_header
-    if headers['Autho
+    if headers['Authorization'].present?
+      return headers['Authorization'].split(' ').last
+    else
