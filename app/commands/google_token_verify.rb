@@ -5,4 +5,8 @@ class GoogleTokenVerify
     @token = token
   end
 
-  d
+  def call
+    payload = validate()
+    if payload.present?
+
+      user = U
