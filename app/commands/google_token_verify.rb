@@ -9,4 +9,6 @@ class GoogleTokenVerify
     payload = validate()
     if payload.present?
 
-      user = U
+      user = User.find_or_initialize_by(email: payload['email'])
+      if !user.persisted?
+     
