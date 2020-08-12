@@ -14,4 +14,6 @@ class GoogleTokenVerify
         user = User.create_with_google_info(payload)
       end
 
-      return {use
+      return {user: user, auth_token: JsonWebToken.encode(user_id: user.id)}
+    else
+      raise 'Faile
