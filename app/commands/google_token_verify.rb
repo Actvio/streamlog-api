@@ -16,4 +16,11 @@ class GoogleTokenVerify
 
       return {user: user, auth_token: JsonWebToken.encode(user_id: user.id)}
     else
-      raise 'Faile
+      raise 'Failed to authenticate with Google'
+    end
+  end
+
+  private
+
+  def validate
+    validator = Goo
