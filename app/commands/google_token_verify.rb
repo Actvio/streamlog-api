@@ -23,4 +23,6 @@ class GoogleTokenVerify
   private
 
   def validate
-    validator = Goo
+    validator = GoogleIDToken::Validator.new
+    audience = ENV.fetch('GOOGLE_AUTH_CLIENT_ID', '')
+    c
