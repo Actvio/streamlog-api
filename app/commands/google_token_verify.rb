@@ -32,4 +32,8 @@ class GoogleTokenVerify
       return payload
     rescue => e
       puts e
-      errors.add :use
+      errors.add :user_authentication, 'Failed to verify google user token'
+    end
+  end
+
+end
