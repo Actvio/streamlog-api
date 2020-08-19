@@ -28,4 +28,8 @@ class GoogleTokenVerify
     client_id = audience
 
     begin
-      payload = validator.check(@token, audi
+      payload = validator.check(@token, audience, client_id)
+      return payload
+    rescue => e
+      puts e
+      errors.add :use
