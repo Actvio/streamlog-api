@@ -17,4 +17,5 @@ class ApplicationController < ActionController::API
   end
 
   def set_cors
-    headers['
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Methods']
