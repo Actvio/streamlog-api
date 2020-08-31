@@ -24,4 +24,8 @@ class ApplicationController < ActionController::API
   end
 
   def error_msg(other_file)
-    if othe
+    if other_file.errors.present?
+      other_file.errors.full_messages.join('. ')
+    end
+
+    ret
