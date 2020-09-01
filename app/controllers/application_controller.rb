@@ -28,4 +28,8 @@ class ApplicationController < ActionController::API
       other_file.errors.full_messages.join('. ')
     end
 
-    ret
+    return ''
+  end
+
+  protected def unauthorized(errors:)
+    render json: { error: errors }, status
