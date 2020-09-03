@@ -32,4 +32,6 @@ class ApplicationController < ActionController::API
   end
 
   protected def unauthorized(errors:)
-    render json: { error: errors }, status
+    render json: { error: errors }, status: :unauthorized
+  end
+end
