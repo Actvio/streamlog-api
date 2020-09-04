@@ -3,4 +3,9 @@ class AuthenticationController < ApplicationController
 
   def login
     @user = User.find_by(email)
-    authenticate(params[:
+    authenticate(params[:password])
+  end
+
+  def signup
+    @user = User.create!(signup_params)
+    aut
