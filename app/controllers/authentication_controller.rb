@@ -8,4 +8,12 @@ class AuthenticationController < ApplicationController
 
   def signup
     @user = User.create!(signup_params)
-    aut
+    authenticate(params[:password])
+  end
+
+  def google_login
+
+  end
+
+  def google_signup
+  
