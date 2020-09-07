@@ -20,4 +20,7 @@ class AuthenticationController < ApplicationController
     authenticate_with_google(token)
   end
 
-  p
+  private
+
+  def authenticate(password)
+    command = AuthenticateUser.call(@user, valid_
