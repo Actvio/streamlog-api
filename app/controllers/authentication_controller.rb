@@ -16,4 +16,8 @@ class AuthenticationController < ApplicationController
   end
 
   def google_signup
-  
+    token = params[:token]
+    authenticate_with_google(token)
+  end
+
+  p
