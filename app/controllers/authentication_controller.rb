@@ -23,4 +23,8 @@ class AuthenticationController < ApplicationController
   private
 
   def authenticate(password)
-    command = AuthenticateUser.call(@user, valid_
+    command = AuthenticateUser.call(@user, valid_user_auth?(params[:password]))
+
+    if command.success?
+      render json: command.result
+  
