@@ -27,4 +27,9 @@ class AuthenticationController < ApplicationController
 
     if command.success?
       render json: command.result
-  
+    else
+      unauthorized(errors: command.errors)
+    end
+  end
+
+  def valid_user
