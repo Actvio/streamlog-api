@@ -32,4 +32,7 @@ class AuthenticationController < ApplicationController
     end
   end
 
-  def valid_user
+  def valid_user_auth?(password)
+    return false unless [@user, password].all?
+
+    @user.au
