@@ -39,4 +39,7 @@ class AuthenticationController < ApplicationController
   end
 
   def authenticate_with_google(token)
-    co
+    command = GoogleTokenVerify.call(token)
+
+    if command.success?
+      render json: 
