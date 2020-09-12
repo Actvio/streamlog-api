@@ -35,4 +35,8 @@ class AuthenticationController < ApplicationController
   def valid_user_auth?(password)
     return false unless [@user, password].all?
 
-    @user.au
+    @user.authenticate(password)
+  end
+
+  def authenticate_with_google(token)
+    co
