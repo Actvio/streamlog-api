@@ -42,4 +42,7 @@ class AuthenticationController < ApplicationController
     command = GoogleTokenVerify.call(token)
 
     if command.success?
-      render json: 
+      render json: command.result
+    else
+      render json: { error: command.errors }, status: :unauthorized
+  
