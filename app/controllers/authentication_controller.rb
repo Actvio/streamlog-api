@@ -49,4 +49,6 @@ class AuthenticationController < ApplicationController
   end
 
   def signup_params
-    params.require(:authentication).
+    params.require(:authentication).permit(:username, :email, :password, :password_confirmation)
+  end
+end
