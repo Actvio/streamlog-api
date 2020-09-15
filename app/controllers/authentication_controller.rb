@@ -45,4 +45,8 @@ class AuthenticationController < ApplicationController
       render json: command.result
     else
       render json: { error: command.errors }, status: :unauthorized
-  
+    end
+  end
+
+  def signup_params
+    params.require(:authentication).
