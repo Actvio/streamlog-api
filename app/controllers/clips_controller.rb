@@ -8,4 +8,7 @@ class ClipsController < ApplicationController
 
     c = current_user.clips.new(p)
     if c.save
-      rende
+      render json: c
+    else
+      err = c.errors.full_messages.join('. ')
+      render
