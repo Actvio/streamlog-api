@@ -11,4 +11,9 @@ class ClipsController < ApplicationController
       render json: c
     else
       err = c.errors.full_messages.join('. ')
-      render
+      render json: {error: err}, status: 400
+    end
+  end
+
+  def index
+    if params[:audio_
