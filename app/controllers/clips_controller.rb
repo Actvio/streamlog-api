@@ -16,4 +16,6 @@ class ClipsController < ApplicationController
   end
 
   def index
-    if params[:audio_
+    if params[:audio_file_id]
+      f = AudioFile.find_by(id: params[:audio_file_id])
+  
