@@ -20,4 +20,10 @@ class ClipsController < ApplicationController
       f = AudioFile.find_by(id: params[:audio_file_id])
       clips = f.clips
     elsif params[:project_id]
-      p = Project.find_by(id: params[:audi
+      p = Project.find_by(id: params[:audio_file_id])
+      clips = p.clips
+    else
+      clips = Clip.all
+    end
+    render json: clips
+ 
