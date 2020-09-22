@@ -26,4 +26,7 @@ class ClipsController < ApplicationController
       clips = Clip.all
     end
     render json: clips
- 
+  end
+
+  def clip_params
+    params.require(:clip).permit(:audio_file_id, :name, :s
