@@ -1,0 +1,1 @@
+class FormsController < ActionController::Base
