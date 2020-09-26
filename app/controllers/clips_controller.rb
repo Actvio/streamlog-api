@@ -29,4 +29,6 @@ class ClipsController < ApplicationController
   end
 
   def clip_params
-    params.require(:clip).permit(:audio_file_id, :name, :s
+    params.require(:clip).permit(:audio_file_id, :name, :start_time, :end_time)
+  end
+end
