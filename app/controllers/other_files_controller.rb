@@ -6,4 +6,9 @@ class OtherFilesController < ApplicationController
   end
 
   def show
-    render json: OtherFile.find(
+    render json: OtherFile.find(params[:id])
+  end
+
+  def create
+    f = current_user.other_files.new(post_params)
+    if !f.s
