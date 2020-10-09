@@ -11,4 +11,7 @@ class OtherFilesController < ApplicationController
 
   def create
     f = current_user.other_files.new(post_params)
-    if !f.s
+    if !f.save
+      err = error_msg(f)
+      render json: {error: err}, status: :bad_request
+ 
