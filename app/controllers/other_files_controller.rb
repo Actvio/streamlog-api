@@ -21,4 +21,7 @@ class OtherFilesController < ApplicationController
   end
 
   def update
-    f = OtherFile.find(param
+    f = OtherFile.find(params[:id])
+    if !f.update(put_params)
+      err = error_msg(f)
+      render json: {error: err}, status: 
