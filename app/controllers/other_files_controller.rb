@@ -32,4 +32,7 @@ class OtherFilesController < ApplicationController
   end
 
   def destroy
-    f = Other
+    f = OtherFile.find(params[:id])
+    if !f.destroy
+      err = error_msg(f)
+      render json: {error: err}, 
