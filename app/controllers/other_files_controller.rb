@@ -14,4 +14,11 @@ class OtherFilesController < ApplicationController
     if !f.save
       err = error_msg(f)
       render json: {error: err}, status: :bad_request
- 
+      return
+    end
+
+    render json: f
+  end
+
+  def update
+    f = OtherFile.find(param
