@@ -44,4 +44,8 @@ class OtherFilesController < ApplicationController
 
   private
 
-  def
+  def post_params
+    params.require(:other_file).permit(:name, :attached_file)
+  end
+
+ 
