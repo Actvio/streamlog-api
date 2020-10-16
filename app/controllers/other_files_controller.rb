@@ -35,4 +35,13 @@ class OtherFilesController < ApplicationController
     f = OtherFile.find(params[:id])
     if !f.destroy
       err = error_msg(f)
-      render json: {error: err}, 
+      render json: {error: err}, status: :bad_request
+      return
+    end
+
+    render json: f
+  end
+
+  private
+
+  def
