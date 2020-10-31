@@ -11,4 +11,8 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    if !@project.update(project_
+    if !@project.update(project_params)
+      render json: {error: 'Failed to update project'}, status: :bad_request
+    end
+
+    render jso
