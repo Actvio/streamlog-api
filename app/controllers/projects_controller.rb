@@ -9,4 +9,6 @@ class ProjectsController < ApplicationController
     render json: @project, include: [:project_attachments, :clips]
   end
 
-  def 
+  def update
+    @project = Project.find(params[:id])
+    if !@project.update(project_
