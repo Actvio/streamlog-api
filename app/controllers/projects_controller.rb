@@ -6,3 +6,7 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.projects.create(project_params)
 
+    render json: @project, include: [:project_attachments, :clips]
+  end
+
+  def 
