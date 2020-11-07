@@ -19,4 +19,9 @@ class ProjectsController < ApplicationController
   end
 
   def clips
-    @project
+    @project = Project.find(params[:id])
+    render json: @project.clips
+  end
+
+  def add_clip
+    @pr
