@@ -15,4 +15,8 @@ class ProjectsController < ApplicationController
       render json: {error: 'Failed to update project'}, status: :bad_request
     end
 
-    render jso
+    render json: @project, include: [:project_attachments, :clips]
+  end
+
+  def clips
+    @project
