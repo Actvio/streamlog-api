@@ -24,4 +24,6 @@ class ProjectsController < ApplicationController
   end
 
   def add_clip
-    @pr
+    @project = Project.find(params[:id])
+
+    if @project.clips.where(id: params[:cli
