@@ -26,4 +26,5 @@ class ProjectsController < ApplicationController
   def add_clip
     @project = Project.find(params[:id])
 
-    if @project.clips.where(id: params[:cli
+    if @project.clips.where(id: params[:clip_id]).length > 0
+      render json: {error: 'Clip already attached to project'}, status:
