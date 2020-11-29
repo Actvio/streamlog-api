@@ -32,4 +32,5 @@ class ProjectsController < ApplicationController
 
     clip = Clip.find(params[:clip_id])
     @project.clips.push(clip)
-    if
+    if !@project.save
+      render json: {error: 'Failed to update project'}, status: :bad_req
