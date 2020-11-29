@@ -27,4 +27,9 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     if @project.clips.where(id: params[:clip_id]).length > 0
-      render json: {error: 'Clip already attached to project'}, status:
+      render json: {error: 'Clip already attached to project'}, status: :bad_request
+    end
+
+    clip = Clip.find(params[:clip_id])
+    @project.clips.push(clip)
+    if
