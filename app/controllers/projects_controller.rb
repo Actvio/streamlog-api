@@ -39,4 +39,7 @@ class ProjectsController < ApplicationController
     render json: @project, include: [:project_attachments]
   end
 
-  def 
+  def remove_clip
+    @project = current_user.projects.find(params[:id])
+
+    if @pr
