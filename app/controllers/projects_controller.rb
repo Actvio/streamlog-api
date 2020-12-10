@@ -42,4 +42,5 @@ class ProjectsController < ApplicationController
   def remove_clip
     @project = current_user.projects.find(params[:id])
 
-    if @pr
+    if @project.clips.where(id: params[:clip_id]).length == 0
+      render json: {error: 'Clip not attached
