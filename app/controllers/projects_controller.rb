@@ -43,4 +43,7 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.find(params[:id])
 
     if @project.clips.where(id: params[:clip_id]).length == 0
-      render json: {error: 'Clip not attached
+      render json: {error: 'Clip not attached to project'}, status: :bad_request
+    end
+
+    join_obj = @project.project_attachments.find_by(
