@@ -48,4 +48,10 @@ class ProjectsController < ApplicationController
 
     join_obj = @project.project_attachments.find_by(item_type: Clip.name, item_id: params[:clip_id])
     if !@project.project_attachments.delete(join_obj.id)
-      render json: {error: 'Failed to update project'}, status: :bad
+      render json: {error: 'Failed to update project'}, status: :bad_request
+    end
+
+    render json: @project, include: [:project_attachments]
+  end
+
+  priva
