@@ -54,4 +54,9 @@ class ProjectsController < ApplicationController
     render json: @project, include: [:project_attachments]
   end
 
-  priva
+  private
+
+  def project_params
+    params.require(:project).permit(
+      :name,
+      project
