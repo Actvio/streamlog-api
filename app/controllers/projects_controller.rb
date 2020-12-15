@@ -46,4 +46,5 @@ class ProjectsController < ApplicationController
       render json: {error: 'Clip not attached to project'}, status: :bad_request
     end
 
-    join_obj = @project.project_attachments.find_by(
+    join_obj = @project.project_attachments.find_by(item_type: Clip.name, item_id: params[:clip_id])
+    if !@project.project_attachments.dele
