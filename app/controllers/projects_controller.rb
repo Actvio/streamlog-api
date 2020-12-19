@@ -61,4 +61,5 @@ class ProjectsController < ApplicationController
       :name,
       project_attachments_attributes: [:id, :item_type, :item_id, :project_id, :_destroy],
     )
-  e
+  end
+end
