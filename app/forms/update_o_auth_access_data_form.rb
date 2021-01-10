@@ -16,4 +16,9 @@ class UpdateOAuthAccessDataForm
       user_id, provider
     ).first || OAuthAccessData.new
 
-    persist!(o_aut
+    persist!(o_auth_access_data)
+  end
+
+  def save!
+    raise NotImplementedError.new('#save!')
+  
