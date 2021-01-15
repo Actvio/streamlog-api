@@ -21,4 +21,11 @@ class UpdateOAuthAccessDataForm
 
   def save!
     raise NotImplementedError.new('#save!')
-  
+  end
+
+  private
+
+  def o_auth_params
+    {
+      user_id:        user_id,
+      provider:   
