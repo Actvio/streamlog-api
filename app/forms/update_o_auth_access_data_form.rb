@@ -28,4 +28,7 @@ class UpdateOAuthAccessDataForm
   def o_auth_params
     {
       user_id:        user_id,
-      provider:   
+      provider:       provider,
+      token:          token,
+      refresh_token:  refresh_token,
+      expires_at:  
