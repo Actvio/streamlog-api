@@ -1,1 +1,2 @@
-class Ap
+class ApplicationJob < ActiveJob::Base
+end
