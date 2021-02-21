@@ -35,4 +35,7 @@ class UpdateOAuthAccessDataForm
     }
   end
 
-  def persist!(o_auth_access_
+  def persist!(o_auth_access_data)
+    o_auth_access_data.update_attributes(o_auth_params)
+  end
+end
