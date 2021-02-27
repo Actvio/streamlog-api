@@ -9,4 +9,4 @@ module BelongsToUser
       inclusion: { in: ->(i) { [i.user_id_was] } },
       on: :update
   end
-en
+end
