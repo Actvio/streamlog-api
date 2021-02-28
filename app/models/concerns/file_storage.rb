@@ -25,3 +25,6 @@ module FileStorage
   def content_type(storage_obj)
     if storage_obj.attached?
       storage_obj.attachment.blob.content_type
+    end
+  end
+end
