@@ -7,4 +7,6 @@ class Folder < ApplicationRecord
     has_many :children, class_name: Folder.name, foreign_key: 'parent_id'
 
     has_many :folder_items, inverse_of: :folder, dependent: :destroy
-    accepts_nest
+    accepts_nested_attributes_for :folder_items, allow_destroy: true
+
+    has_many :audio_files, through: :
