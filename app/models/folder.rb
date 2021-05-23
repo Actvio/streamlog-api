@@ -11,4 +11,9 @@ class Folder < ApplicationRecord
 
     has_many :audio_files, through: :folder_items, inverse_of: :folders, source: :item, source_type: AudioFile.name
     has_many :clips, through: :folder_items, inverse_of: :folders, source: :item, source_type: Clip.name
-    has_many :other_files, through: :folder_items, inverse_of: :folders, source: :it
+    has_many :other_files, through: :folder_items, inverse_of: :folders, source: :item, source_type: OtherFile.name
+
+    validates :name, presence: true
+
+    def items
+   
