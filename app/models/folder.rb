@@ -16,4 +16,8 @@ class Folder < ApplicationRecord
     validates :name, presence: true
 
     def items
-   
+        folder_items.includes(:item).map(&:item)
+    end
+
+    def add_item(item)
+        folder_items
