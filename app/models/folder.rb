@@ -20,4 +20,7 @@ class Folder < ApplicationRecord
     end
 
     def add_item(item)
-        folder_items
+        folder_items.push(FolderItem.new(folder: self, item: item))
+    end
+
+    def remove_item(it
