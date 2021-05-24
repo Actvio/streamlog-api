@@ -23,4 +23,7 @@ class Folder < ApplicationRecord
         folder_items.push(FolderItem.new(folder: self, item: item))
     end
 
-    def remove_item(it
+    def remove_item(item)
+        folder_items.where(item: item).destroy_all
+    end
+end
