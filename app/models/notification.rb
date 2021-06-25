@@ -19,4 +19,9 @@ class Notification < ApplicationRecord
     TYPE_ADD_COMMENT,
   ]
 
-  pr
+  private
+
+  def send_push_notification
+     user.send_push_notification(self)
+  end
+end
