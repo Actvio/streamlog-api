@@ -7,3 +7,6 @@ class Notification < ApplicationRecord
 
   scope :read, -> { where(marked_read: true) }
   scope :unread, -> { where(marked_read: false) }
+
+  scope :email_notified, -> { where(email_notified: true) }
+  scope :not_email_notified, -> { where(email_notified
