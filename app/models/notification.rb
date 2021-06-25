@@ -9,4 +9,8 @@ class Notification < ApplicationRecord
   scope :unread, -> { where(marked_read: false) }
 
   scope :email_notified, -> { where(email_notified: true) }
-  scope :not_email_notified, -> { where(email_notified
+  scope :not_email_notified, -> { where(email_notified: false) }
+
+  after_create :send_push_notification
+
+  TYPE_ADD_COMMENT = 'Ad
