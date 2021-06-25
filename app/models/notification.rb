@@ -13,4 +13,10 @@ class Notification < ApplicationRecord
 
   after_create :send_push_notification
 
-  TYPE_ADD_COMMENT = 'Ad
+  TYPE_ADD_COMMENT = 'AddComment'
+
+  GROUP_TYPE_COMMENTS = [
+    TYPE_ADD_COMMENT,
+  ]
+
+  pr
