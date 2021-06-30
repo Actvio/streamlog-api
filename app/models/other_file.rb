@@ -1,4 +1,7 @@
 class OtherFile < ApplicationRecord
   include FileStorage
   include ProjectAttachable
-  inc
+  include Commentable
+  include FolderContent
+  acts_as_paranoid
+
