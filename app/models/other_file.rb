@@ -5,3 +5,5 @@ class OtherFile < ApplicationRecord
   include FolderContent
   acts_as_paranoid
 
+  include BelongsToUser
+  belongs_to :user, inverse_of: :other_files
