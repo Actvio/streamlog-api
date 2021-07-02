@@ -7,3 +7,8 @@ class OtherFile < ApplicationRecord
 
   include BelongsToUser
   belongs_to :user, inverse_of: :other_files
+
+  has_one_attached :attached_file
+
+  def url
+    calculate_url(attached_fil
