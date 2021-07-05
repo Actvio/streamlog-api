@@ -11,4 +11,9 @@ class OtherFile < ApplicationRecord
   has_one_attached :attached_file
 
   def url
-    calculate_url(attached_fil
+    calculate_url(attached_file)
+  end
+
+  def as_json(options={})
+    super(options).merge(
+      content_type: content_type(attac
