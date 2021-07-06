@@ -16,4 +16,7 @@ class OtherFile < ApplicationRecord
 
   def as_json(options={})
     super(options).merge(
-      content_type: content_type(attac
+      content_type: content_type(attached_file),
+    )
+  end
+end
