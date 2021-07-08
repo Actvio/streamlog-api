@@ -4,4 +4,6 @@ class Project < ApplicationRecord
   acts_as_paranoid
 
   has_many :project_attachments, inverse_of: :project, dependent: :destroy
-  accepts_nested_attribute
+  accepts_nested_attributes_for :project_attachments, allow_destroy: true
+
+  has_many :comments, as: :commentable
