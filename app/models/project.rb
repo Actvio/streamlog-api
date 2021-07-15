@@ -8,4 +8,7 @@ class Project < ApplicationRecord
 
   has_many :comments, as: :commentable
   has_many :audio_files, through: :project_attachments, source: :item, source_type: AudioFile.name
-  has_many :clips, through: :project_attachments, source: :item, source
+  has_many :clips, through: :project_attachments, source: :item, source_type: Clip.name
+
+  validates :name, :user_id, presence: true
+end
