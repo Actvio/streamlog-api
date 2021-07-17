@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_one_attached :avatar
   acts_as_paranoid
 
-  has_many :comments, 
+  has_many :comments, inverse_of: :user
+  has_many :projects, inverse_of: :user
+  has_many :clips, inverse_of:
