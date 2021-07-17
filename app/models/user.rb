@@ -1,3 +1,5 @@
 require 'open-uri'
 
-class Us
+class User < ApplicationRecord
+  include FileStorage
+  has_secure_password validatio
