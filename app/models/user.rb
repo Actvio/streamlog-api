@@ -10,4 +10,6 @@ class User < ApplicationRecord
   has_many :projects, inverse_of: :user
   has_many :clips, inverse_of: :user
   has_many :audio_files, inverse_of: :user
-  has_many :other_files, inve
+  has_many :other_files, inverse_of: :user
+  has_many :notifications, inverse_of: :user
+  has_many :folders,
