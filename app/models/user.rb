@@ -12,4 +12,7 @@ class User < ApplicationRecord
   has_many :audio_files, inverse_of: :user
   has_many :other_files, inverse_of: :user
   has_many :notifications, inverse_of: :user
-  has_many :folders,
+  has_many :folders, inverse_of: :user
+  has_many :oauth_access_datas
+
+  # validates :email, uniqueness
