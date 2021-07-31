@@ -26,4 +26,9 @@ class User < ApplicationRecord
   end
 
   def send_email(message)
-    puts "Emailing #{username} notificat
+    puts "Emailing #{username} notifications: \n#{message}"
+  end
+
+  def send_push_notification(message)
+    # queue for later
+    puts "Sending push noti
