@@ -15,4 +15,10 @@ class User < ApplicationRecord
   has_many :folders, inverse_of: :user
   has_many :oauth_access_datas
 
-  # validates :email, uniqueness
+  # validates :email, uniqueness: true, presence: true
+
+  def image_url
+    calculate_url(avatar)
+  end
+
+  def as_json(o
