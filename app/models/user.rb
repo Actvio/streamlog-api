@@ -22,4 +22,8 @@ class User < ApplicationRecord
   end
 
   def as_json(options={})
-    super(options.merge(except: ['password_digest'], methods: [:im
+    super(options.merge(except: ['password_digest'], methods: [:image_url]))
+  end
+
+  def send_email(message)
+    puts "Emailing #{username} notificat
