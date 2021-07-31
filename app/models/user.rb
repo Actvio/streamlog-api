@@ -21,4 +21,5 @@ class User < ApplicationRecord
     calculate_url(avatar)
   end
 
-  def as_json(o
+  def as_json(options={})
+    super(options.merge(except: ['password_digest'], methods: [:im
