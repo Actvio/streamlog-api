@@ -31,4 +31,7 @@ class User < ApplicationRecord
 
   def send_push_notification(message)
     # queue for later
-    puts "Sending push noti
+    puts "Sending push notification to #{username}: \n#{message}"
+  end
+
+  def self.create_with_goo
