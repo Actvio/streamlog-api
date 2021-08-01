@@ -34,4 +34,9 @@ class User < ApplicationRecord
     puts "Sending push notification to #{username}: \n#{message}"
   end
 
-  def self.create_with_goo
+  def self.create_with_google_info(payload)
+    email = payload['email']
+
+    user = User.create!(
+      email: email,
+ 
