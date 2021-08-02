@@ -39,4 +39,6 @@ class User < ApplicationRecord
 
     user = User.create!(
       email: email,
- 
+      password: 'google',
+      username: email.slice(0, email.index('@')),
+  
