@@ -42,4 +42,9 @@ class User < ApplicationRecord
       password: 'google',
       username: email.slice(0, email.index('@')),
       first_name: payload['name'],
-      last_name: payload['given_name']
+      last_name: payload['given_name'],
+    )
+
+    avatar_url = payload['picture']
+    if avatar_url.present?
+      avatar = open(av
