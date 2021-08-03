@@ -47,4 +47,8 @@ class User < ApplicationRecord
 
     avatar_url = payload['picture']
     if avatar_url.present?
-      avatar = open(av
+      avatar = open(avatar_url)
+      user.avatar.attach(io: avatar, filename: 'avatar.jpg')
+    end
+
+    u
