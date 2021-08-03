@@ -51,4 +51,8 @@ class User < ApplicationRecord
       user.avatar.attach(io: avatar, filename: 'avatar.jpg')
     end
 
-    u
+    user
+  end
+
+  def self.subscribed_to_notification_type(type)
+    if Notific
