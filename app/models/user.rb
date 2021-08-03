@@ -41,4 +41,5 @@ class User < ApplicationRecord
       email: email,
       password: 'google',
       username: email.slice(0, email.index('@')),
-  
+      first_name: payload['name'],
+      last_name: payload['given_name']
