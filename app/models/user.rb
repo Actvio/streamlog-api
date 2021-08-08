@@ -56,4 +56,6 @@ class User < ApplicationRecord
 
   def self.subscribed_to_notification_type(type)
     if Notification::GROUP_TYPE_COMMENTS.include? type
-      # lets filter on users that want comment 
+      # lets filter on users that want comment notifications
+      # return joins(:notification_settings).where(comments: true)
+    end
