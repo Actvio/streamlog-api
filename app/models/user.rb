@@ -59,3 +59,7 @@ class User < ApplicationRecord
       # lets filter on users that want comment notifications
       # return joins(:notification_settings).where(comments: true)
     end
+
+    return where.not(id: 0)
+  end
+end
