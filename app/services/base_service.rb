@@ -1,4 +1,7 @@
 class BaseService
 
   def logger
-    re
+    return Rails.logger
+  end
+
+end
