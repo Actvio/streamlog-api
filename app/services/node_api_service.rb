@@ -10,4 +10,6 @@ class NodeApiService < BaseService
     raw = RestClient::Request.execute(
       method: :get,
       url: full_url,
-      raw_response:
+      raw_response: true)
+    f = File.open(raw.file.path)
+    audio_file = AudioFile.new
