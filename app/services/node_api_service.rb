@@ -6,4 +6,5 @@ class NodeApiService < BaseService
   end
 
   def trim(start:, duration:)
-    full_url = "#{ENV.fet
+    full_url = "#{ENV.fetch('NODE_HOST')}/download?url=#{@url}&start=#{start}&duration=#{duration}"
+    raw = 
