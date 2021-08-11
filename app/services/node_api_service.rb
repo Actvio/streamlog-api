@@ -7,4 +7,7 @@ class NodeApiService < BaseService
 
   def trim(start:, duration:)
     full_url = "#{ENV.fetch('NODE_HOST')}/download?url=#{@url}&start=#{start}&duration=#{duration}"
-    raw = 
+    raw = RestClient::Request.execute(
+      method: :get,
+      url: full_url,
+      raw_response:
