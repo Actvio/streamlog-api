@@ -14,4 +14,7 @@ class NodeApiService < BaseService
     f = File.open(raw.file.path)
     audio_file = AudioFile.new(name: 'name.mp3')
     audio_file.attached_file.attach(io: f, filename: 'name.mp3')
-    au
+    audio_file.save
+    audio_file
+  end
+end
