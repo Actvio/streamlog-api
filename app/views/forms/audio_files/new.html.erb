@@ -1,1 +1,4 @@
-<%= form_for @audio_file
+<%= form_for @audio_file do |f| %>
+  <%= f.file_field :attached_file %>
+  <%= f.submit 'Upload' %>
+<% end 
