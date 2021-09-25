@@ -9,4 +9,5 @@
 #
 
 require "pathname"
-ENV["BUNDL
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+  Pathname.new(__FILE__)
