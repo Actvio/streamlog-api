@@ -23,4 +23,7 @@ Replace `bin/bundle` by running `bundle binstubs bundler --force`, then run this
   end
 end
 
-re
+require "rubygems"
+require "bundler/setup"
+
+load Gem.bin_path("rack", "rackup")
