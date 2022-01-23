@@ -31,4 +31,7 @@ Rails.application.configure do
   config.active_storage.service = :local
   # config.active_storage.service = :amazon
 
-  config.read_e
+  config.read_encrypted_secrets = true
+
+  # Don't care if the mailer can't send.
+  config.action_m
