@@ -41,4 +41,5 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
-  #
+  # Raise an error on page load if there are pending migrations.
+  conf
