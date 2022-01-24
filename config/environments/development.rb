@@ -34,4 +34,6 @@ Rails.application.configure do
   config.read_encrypted_secrets = true
 
   # Don't care if the mailer can't send.
-  config.action_m
+  config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.perform_caching = fals
