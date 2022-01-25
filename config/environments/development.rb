@@ -42,4 +42,6 @@ Rails.application.configure do
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.
-  conf
+  config.active_record.migration_error = :page_load
+
+  # Highlight code that triggered
