@@ -47,4 +47,7 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
-  # Use a different cache store in produ
+  # Use a different cache store in production.
+  # config.cache_store = :mem_cache_store
+
+  # Use a real queuing backen
