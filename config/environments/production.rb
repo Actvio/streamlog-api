@@ -65,4 +65,6 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
-  c
+  config.active_support.deprecation = :notify
+
+  # Use default logging formatter so that PID and 
