@@ -1,1 +1,3 @@
-# Be sure to restart your server when yo
+# Be sure to restart your server when you modify this file.
+
+# Configure sensitive parameters which will be f
