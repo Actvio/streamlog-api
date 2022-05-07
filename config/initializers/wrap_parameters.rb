@@ -8,4 +8,5 @@ ActiveSupport.on_load(:action_controller) do
   wrap_parameters format: [:json]
 end
 
-# To e
+# To enable root element in JSON for ActiveRecord objects.
+# ActiveSupport.on_load(:active_rec
