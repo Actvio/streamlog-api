@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   resources :other_files
   resources :folders
   resources :clips
-  resour
+  resources :projects do
+    member do
+      get 'clips'
+      put 'add_clip'
+      put
