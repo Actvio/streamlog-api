@@ -11,4 +11,8 @@ Rails.application.routes.draw do
     end
   end
   resources :authentication, only: [] do
-    collect
+    collection do
+      post 'login'
+      post 'signup'
+      post 'google_signup'
+      post
