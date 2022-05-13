@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     member do
       get 'clips'
       put 'add_clip'
-      put
+      put 'remove_clip'
+    end
+  end
+  resources :authentication, only: [] do
+    collect
