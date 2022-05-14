@@ -19,4 +19,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :audio_files, only: [:index, :show, :new, :cre
+  resources :audio_files, only: [:index, :show, :new, :create, :update] do
+    member do
+      post :trim
+    end
+  end
+
+  resourc
