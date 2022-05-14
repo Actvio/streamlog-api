@@ -15,4 +15,8 @@ Rails.application.routes.draw do
       post 'login'
       post 'signup'
       post 'google_signup'
-      post
+      post 'google_login'
+    end
+  end
+
+  resources :audio_files, only: [:index, :show, :new, :cre
