@@ -30,4 +30,9 @@ Rails.application.routes.draw do
 
   resources :forms do
     collection do
-   
+      get :audio_files
+    end
+  end
+
+  # Routes for Google authentication
+  get 'auth/:provider
