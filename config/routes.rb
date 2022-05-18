@@ -25,4 +25,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resourc
+  resources :comments
+  resources :users
+
+  resources :forms do
+    collection do
+   
