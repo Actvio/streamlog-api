@@ -35,4 +35,6 @@ Rails.application.routes.draw do
   end
 
   # Routes for Google authentication
-  get 'auth/:provider
+  get 'auth/:provider/callback', to: 'omniauth_sessions#create'
+  get 'auth/failure', to: redirect('/')
+end
