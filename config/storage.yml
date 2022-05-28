@@ -16,4 +16,6 @@ amazon:
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
-#   service: G
+#   service: GCS
+#   project: your_project
+#   credentials: <%= Rails.root.join("p
