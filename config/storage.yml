@@ -18,4 +18,7 @@ amazon:
 # google:
 #   service: GCS
 #   project: your_project
-#   credentials: <%= Rails.root.join("p
+#   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
+#   bucket: your_own_bucket
+
+# Use rails credentials:edit
