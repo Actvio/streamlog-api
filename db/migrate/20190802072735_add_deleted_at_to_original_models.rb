@@ -5,4 +5,7 @@ class AddDeletedAtToOriginalModels < ActiveRecord::Migration[5.2]
     add_column :users, :deleted_at, :datetime
 
     add_index :audio_files, :deleted_at
-    add_ind
+    add_index :comments, :deleted_at
+    add_index :users, :deleted_at
+  end
+end
