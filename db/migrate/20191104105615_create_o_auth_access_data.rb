@@ -7,4 +7,7 @@ class CreateOAuthAccessData < ActiveRecord::Migration[5.2]
       t.string :refresh_token
       t.timestamp :expires_at
 
-  
+      t.timestamps
+    end
+  end
+end
