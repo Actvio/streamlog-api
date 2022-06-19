@@ -4,4 +4,8 @@ class CreateOtherFiles < ActiveRecord::Migration[5.2]
       t.string :name
       t.references :user, index: true
 
-      t.datetime :dele
+      t.datetime :deleted_at, index: true
+      t.timestamps
+    end
+  end
+end

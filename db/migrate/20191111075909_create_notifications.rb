@@ -1,0 +1,1 @@
+class CreateNotifications < ActiveRecord::M
