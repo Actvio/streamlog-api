@@ -4,4 +4,6 @@ class CreateNotifications < ActiveRecord::Migration[5.2]
       t.boolean :marked_read, default: false, index: true
       t.boolean :email_notified, default: false, index: true
       t.references :user, index: true
-      t.references :source, polymor
+      t.references :source, polymorphic: true, index: true
+
+      t.string :notification_type, index: true
