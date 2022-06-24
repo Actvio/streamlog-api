@@ -7,3 +7,9 @@ class CreateNotifications < ActiveRecord::Migration[5.2]
       t.references :source, polymorphic: true, index: true
 
       t.string :notification_type, index: true
+      t.string :message
+
+      t.timestamps
+    end
+  end
+end
