@@ -1,3 +1,6 @@
 class AddAudioLengthAndUserIdToAudioFiles < ActiveRecord::Migration[5.2]
   def change
-    add_column :audio_fi
+    add_column :audio_files, :audio_length, :float
+
+    add_column :audio_files, :user_id, :bigint
+    add_in
