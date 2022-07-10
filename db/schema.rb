@@ -21,3 +21,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+   
