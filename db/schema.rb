@@ -32,3 +32,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.text "metadata"
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_
