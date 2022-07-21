@@ -39,4 +39,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
   create_table "audio_files", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
-    t.datetime "updated_a
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.float "audio_length"
+    t.big
