@@ -44,4 +44,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.float "audio_length"
     t.bigint "user_id"
     t.index ["deleted_at"], name: "index_audio_files_on_deleted_at"
-    t.index 
+    t.index ["user_id"], name: "index_audio_files_on_user_id"
+  end
+
+  create_table "clips", force: 
