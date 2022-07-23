@@ -47,4 +47,8 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["user_id"], name: "index_audio_files_on_user_id"
   end
 
-  create_table "clips", force: 
+  create_table "clips", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "audio_file_id"
+    t.string "name"
+   
