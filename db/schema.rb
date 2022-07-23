@@ -51,4 +51,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.bigint "user_id"
     t.bigint "audio_file_id"
     t.string "name"
-   
+    t.float "start_time"
+    t.float "end_time"
+    t.datetime "deleted_at"
+ 
