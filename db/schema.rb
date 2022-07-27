@@ -63,4 +63,6 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
 
   create_table "comments", force: :cascade do |t|
     t.text "text"
-    t.bi
+    t.bigint "user_id"
+    t.bigint "audio_file_id"
+    t.datetime "crea
