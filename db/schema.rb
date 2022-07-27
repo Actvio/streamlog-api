@@ -58,4 +58,9 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.datetime "updated_at", null: false
     t.index ["audio_file_id"], name: "index_clips_on_audio_file_id"
     t.index ["deleted_at"], name: "index_clips_on_deleted_at"
-    t.index ["user_id"], name: "index_cli
+    t.index ["user_id"], name: "index_clips_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "text"
+    t.bi
