@@ -67,4 +67,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.bigint "audio_file_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "delet
+    t.datetime "deleted_at"
+    t.string "commentable_type"
+    t.bigint "commentable_id"
+    t.index ["audio_file_i
