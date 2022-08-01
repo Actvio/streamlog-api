@@ -71,4 +71,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.string "commentable_type"
     t.bigint "commentable_id"
     t.index ["audio_file_id"], name: "index_comments_on_audio_file_id"
-    t.index ["commentable_type", "co
+    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
+  
