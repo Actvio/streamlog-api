@@ -76,4 +76,8 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "folder_items", force: :casca
+  create_table "folder_items", force: :cascade do |t|
+    t.string "item_type"
+    t.bigint "item_id"
+    t.bigint "folder_id"
+    t.datetime 
