@@ -85,4 +85,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_folder_items_on_deleted_at"
     t.index ["folder_id"], name: "index_folder_items_on_folder_id"
-    t.index [
+    t.index ["item_type", "item_id"], name: "index_folder_items_on_item_type_and_item_id"
+  end
+
+  cr
