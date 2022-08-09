@@ -88,4 +88,6 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["item_type", "item_id"], name: "index_folder_items_on_item_type_and_item_id"
   end
 
-  cr
+  create_table "folders", force: :cascade do |t|
+    t.bigint "parent_id"
+    t.bigint
