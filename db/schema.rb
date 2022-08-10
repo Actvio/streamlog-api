@@ -90,4 +90,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
 
   create_table "folders", force: :cascade do |t|
     t.bigint "parent_id"
-    t.bigint
+    t.bigint "user_id"
+    t.string "name"
+    t.datetime "deleted_at"
+    t.datetime "created_a
