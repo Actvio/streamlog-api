@@ -93,4 +93,6 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.bigint "user_id"
     t.string "name"
     t.datetime "deleted_at"
-    t.datetime "created_a
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["del
