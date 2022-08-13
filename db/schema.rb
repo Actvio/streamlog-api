@@ -100,4 +100,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["user_id"], name: "index_folders_on_user_id"
   end
 
-  create_t
+  create_table "notifications", force: :cascade do |t|
+    t.boolean "marked_re
