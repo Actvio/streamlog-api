@@ -103,4 +103,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
   create_table "notifications", force: :cascade do |t|
     t.boolean "marked_read", default: false
     t.boolean "email_notified", default: false
-    t.big
+    t.bigint "user_id"
+    t.string "source_type"
+    t.bigint "source_id"
+    t.string "notif
