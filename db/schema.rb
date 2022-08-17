@@ -106,4 +106,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.bigint "user_id"
     t.string "source_type"
     t.bigint "source_id"
-    t.string "notif
+    t.string "notification_type"
+    t.string "message"
+    t.datetime "created_at", null: false
+    t
