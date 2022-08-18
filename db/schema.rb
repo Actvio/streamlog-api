@@ -109,4 +109,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.string "notification_type"
     t.string "message"
     t.datetime "created_at", null: false
-    t
+    t.datetime "updated_at", null: false
+    t.index ["email_notified"], name: "inde
