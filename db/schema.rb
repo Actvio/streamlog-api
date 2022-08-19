@@ -111,4 +111,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email_notified"], name: "index_notifications_on_email_notified"
-    t.index ["marked_read"], name: "index_notificatio
+    t.index ["marked_read"], name: "index_notifications_on_marked_read"
+    t.index ["notification_type"], name: "index_notifications_on_notificatio
