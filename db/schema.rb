@@ -113,4 +113,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["email_notified"], name: "index_notifications_on_email_notified"
     t.index ["marked_read"], name: "index_notifications_on_marked_read"
     t.index ["notification_type"], name: "index_notifications_on_notification_type"
-    t.index ["source_type", "source_id"], name: "index_notifications_on_source_type
+    t.index ["source_type", "source_id"], name: "index_notifications_on_source_type_and_source_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
