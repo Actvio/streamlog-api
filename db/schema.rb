@@ -115,3 +115,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["notification_type"], name: "index_notifications_on_notification_type"
     t.index ["source_type", "source_id"], name: "index_notifications_on_source_type_and_source_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
+  create_table "o_auth_access_data", force: :cascade do |t|
+    t.bigint "user_i
