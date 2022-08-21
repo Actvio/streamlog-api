@@ -118,4 +118,8 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
   end
 
   create_table "o_auth_access_data", force: :cascade do |t|
-    t.bigint "user_i
+    t.bigint "user_id"
+    t.string "provider"
+    t.string "token"
+    t.string "refresh_token"
+   
