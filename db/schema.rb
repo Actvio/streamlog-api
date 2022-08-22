@@ -122,4 +122,6 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.string "provider"
     t.string "token"
     t.string "refresh_token"
-   
+    t.datetime "expires_at"
+    t.datetime "created_at", null: false
+    t.datetime
