@@ -124,4 +124,6 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.string "refresh_token"
     t.datetime "expires_at"
     t.datetime "created_at", null: false
-    t.datetime
+    t.datetime "updated_at", null: false
+    t.index ["provider"], name: "index_o_auth_access_data_on_provider"
+  
