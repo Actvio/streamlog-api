@@ -129,4 +129,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["user_id"], name: "index_o_auth_access_data_on_user_id"
   end
 
-  create_table "oth
+  create_table "other_files", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "deleted_at
