@@ -139,4 +139,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["user_id"], name: "index_other_files_on_user_id"
   end
 
-  create_table "project_attachments
+  create_table "project_attachments", force: :cascade do |t|
+    t.string "item_type"
+    t.bigint "item_id"
+    t.bigint "project
