@@ -142,4 +142,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
   create_table "project_attachments", force: :cascade do |t|
     t.string "item_type"
     t.bigint "item_id"
-    t.bigint "project
+    t.bigint "project_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+  
