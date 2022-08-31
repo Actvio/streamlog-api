@@ -146,4 +146,5 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["deleted_at"], name: "index_proje
+    t.index ["deleted_at"], name: "index_project_attachments_on_deleted_at"
+    t.index ["item_type", "item_id"], name: "inde
