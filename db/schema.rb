@@ -148,4 +148,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_project_attachments_on_deleted_at"
     t.index ["item_type", "item_id"], name: "index_project_attachments_on_item_type_and_item_id"
-    t.index ["project_id
+    t.index ["project_id"], name: "index_project_attachments_on_project_id"
+  end
+
+  create_table "pro
