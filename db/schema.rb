@@ -151,4 +151,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
     t.index ["project_id"], name: "index_project_attachments_on_project_id"
   end
 
-  create_table "pro
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.b
