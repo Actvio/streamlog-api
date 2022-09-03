@@ -154,4 +154,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_054535) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.b
+    t.bigint "user_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated
