@@ -1,3 +1,5 @@
 version: '3'
 services:
-  rail
+  rails:
+    command: rails db:drop db:create db:migrate bundle exec rspec
+   
