@@ -6,4 +6,8 @@ services:
       - .:/app
       - ./Gemfile.lock:/app/Gemfile.lock
       - /app/tmp
-    bui
+    build: .
+    depends_on:
+      - "dbtest"
+    environment:
+      MUSIC_SNIPER_DATABASE_USERN
