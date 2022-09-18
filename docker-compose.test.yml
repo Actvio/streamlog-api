@@ -10,4 +10,6 @@ services:
     depends_on:
       - "dbtest"
     environment:
-      MUSIC_SNIPER_DATABASE_USERN
+      MUSIC_SNIPER_DATABASE_USERNAME: postgres
+      MUSIC_SNIPER_DATABASE_PASSWORD: heydude
+      MUSIC_SNIP
