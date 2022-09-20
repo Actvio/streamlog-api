@@ -15,4 +15,9 @@ services:
       MUSIC_SNIPER_DATABASE_PORT: 5432
       MUSIC_SNIPER_DATABASE_HOST: dbtest
       RAILS_HOST: http://localhost:3000
-      MUSIC_SNIPER_DATABASE_URL: "postgres://user:pass@postgres:5432/datex_dev?pool=5&encoding=utf-
+      MUSIC_SNIPER_DATABASE_URL: "postgres://user:pass@postgres:5432/datex_dev?pool=5&encoding=utf-8"
+      RAILS_ENV: test
+  dbtest:
+    image: postgres
+    environment:
+      POSTGRES_USER
