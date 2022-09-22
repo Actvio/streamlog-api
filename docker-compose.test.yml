@@ -20,4 +20,5 @@ services:
   dbtest:
     image: postgres
     environment:
-      POSTGRES_USER
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: heydude
