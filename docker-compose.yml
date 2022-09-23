@@ -10,4 +10,6 @@ services:
     ports:
       - "3000:3000"
     environment:
-      MUSIC_SNIP
+      MUSIC_SNIPER_DATABASE_USERNAME: postgres
+      MUSIC_SNIPER_DATABASE_PASSWORD: heydude
+      M
