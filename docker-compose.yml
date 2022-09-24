@@ -12,4 +12,6 @@ services:
     environment:
       MUSIC_SNIPER_DATABASE_USERNAME: postgres
       MUSIC_SNIPER_DATABASE_PASSWORD: heydude
-      M
+      MUSIC_SNIPER_DATABASE_PORT: 5432
+      MUSIC_SNIPER_DATABASE_HOST: db
+      MUSIC_
