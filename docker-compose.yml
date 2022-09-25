@@ -14,4 +14,7 @@ services:
       MUSIC_SNIPER_DATABASE_PASSWORD: heydude
       MUSIC_SNIPER_DATABASE_PORT: 5432
       MUSIC_SNIPER_DATABASE_HOST: db
-      MUSIC_SNIPER_DATABASE_URL: "postgres://user:pass@postgres:5432/datex_dev?pool=5&encoding
+      MUSIC_SNIPER_DATABASE_URL: "postgres://user:pass@postgres:5432/datex_dev?pool=5&encoding=utf-8"
+      RACK_ENV: development
+      RAILS_HOST: http://localhost:3000
+ 
