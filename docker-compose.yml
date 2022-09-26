@@ -17,4 +17,6 @@ services:
       MUSIC_SNIPER_DATABASE_URL: "postgres://user:pass@postgres:5432/datex_dev?pool=5&encoding=utf-8"
       RACK_ENV: development
       RAILS_HOST: http://localhost:3000
- 
+      RAILS_ENV: development
+      RAILS_HOST: http://localhost:3000
+      GOOGLE_AUTH_C
