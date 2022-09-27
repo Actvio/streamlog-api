@@ -19,4 +19,5 @@ services:
       RAILS_HOST: http://localhost:3000
       RAILS_ENV: development
       RAILS_HOST: http://localhost:3000
-      GOOGLE_AUTH_C
+      GOOGLE_AUTH_CLIENT_ID: 918861016270-1nsq4f1vov35ql1rkbrm63rkg89hn51e.apps.googleusercontent.com
+    env_
