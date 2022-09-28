@@ -30,4 +30,4 @@ services:
       - "5433:5432"
     environment:
       POSTGRES_USER: postgres
-      POSTGRE
+      POSTGRES_PASSWORD: heydude
