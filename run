@@ -1,2 +1,3 @@
 docker-compose rm -f rails
-docker-compose run --rm rails bash -c "rake db:exists && rails db:migrate || rails
+docker-compose run --rm rails bash -c "rake db:exists && rails db:migrate || rails db:setup"
+docker-compose up
