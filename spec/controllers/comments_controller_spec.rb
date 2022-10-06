@@ -44,3 +44,48 @@ RSpec.describe CommentsController, type: :controller do
 
   describe '#show' do
     it 'should return comments' do
+      comment = FactoryBot.create(:comment, user: @user, commentable: @audio_file)
+
+      get :show, params: {id: comment.id}
+      res = JSON.parse(response.body)
+
+      expect(response.status).to eq(200)
+      expect(res['id']).to eq(comment.id)
+    end
+  end
+
+  describe '#create' do
+    it 'should create a comment' do
+      post :create, params: {comment: {
+        text: 'Sample Text',
+        commentable_type: AudioFile.name,
+        commentable_id: @audio_file.id,
+      }}
+      res = JSON.parse(response.body)
+
+      expect(response.status).to eq(200)
+      expect(res).to include(
+        'id' => Comment.last.id,
+        'text' => 'Sample Text',
+        'commentable_id' => @audio_file.id,
+        'commentable_type' => AudioFile.name,
+      )
+    end
+  end
+
+  describe '#update' do
+
+    it 'should update comment' do
+      comment = FactoryBot.create(:comment, user: @user, commentable: @audio_file)
+
+      put :update, params: {id: comment.id, comment: {
+        text: 'Sample Text Changed',
+      }}
+      res = JSON.parse(response.body)
+
+      expect(response.status).to eq(200)
+      expect(res['text']).to eq('Sample Text Changed')
+      expect(Comment.find(comment.id).text).to eq('Sample Text Changed')
+    end
+  end
+end
