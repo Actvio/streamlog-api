@@ -5,4 +5,9 @@ RSpec.describe FoldersController, type: :controller do
     @user = FactoryBot.create(:user)
 
     command = AuthenticateUser.call(@user, true)
-    token = comman
+    token = command.result[:auth_token]
+
+    request.headers.merge!({'Authorization' => token})
+  end
+
+  describe '
