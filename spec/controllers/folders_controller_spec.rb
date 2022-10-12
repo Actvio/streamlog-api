@@ -10,4 +10,7 @@ RSpec.describe FoldersController, type: :controller do
     request.headers.merge!({'Authorization' => token})
   end
 
-  describe '
+  describe '#index' do
+    it 'should return folder_item joins' do
+      get :index
+      res = 
