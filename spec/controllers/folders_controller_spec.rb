@@ -16,4 +16,7 @@ RSpec.describe FoldersController, type: :controller do
       res = JSON.parse(response.body)
       expect(res).to eq([])
 
-      folder = FactoryBot.creat
+      folder = FactoryBot.create(:folder)
+      audio_file = FactoryBot.create(:audio_file)
+
+      folder.
