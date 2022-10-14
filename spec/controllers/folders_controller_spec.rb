@@ -13,4 +13,7 @@ RSpec.describe FoldersController, type: :controller do
   describe '#index' do
     it 'should return folder_item joins' do
       get :index
-      res = 
+      res = JSON.parse(response.body)
+      expect(res).to eq([])
+
+      folder = FactoryBot.creat
