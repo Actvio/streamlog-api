@@ -19,4 +19,8 @@ RSpec.describe FoldersController, type: :controller do
       folder = FactoryBot.create(:folder)
       audio_file = FactoryBot.create(:audio_file)
 
-      folder.
+      folder.audio_files.push(audio_file)
+      folder.save
+
+      get :index
+      res = JSON.pars
