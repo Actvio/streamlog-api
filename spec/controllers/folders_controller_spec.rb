@@ -23,4 +23,8 @@ RSpec.describe FoldersController, type: :controller do
       folder.save
 
       get :index
-      res = JSON.pars
+      res = JSON.parse(response.body)
+      expect(res.length).to eq(1)
+
+      data = res.first
+      expect(
