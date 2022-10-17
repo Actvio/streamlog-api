@@ -27,4 +27,5 @@ RSpec.describe FoldersController, type: :controller do
       expect(res.length).to eq(1)
 
       data = res.first
-      expect(
+      expect(data['folder_items'].length).to eq(1)
+      expect(data['folder_items'].first['item_
