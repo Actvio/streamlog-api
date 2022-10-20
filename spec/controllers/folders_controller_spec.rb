@@ -37,4 +37,9 @@ RSpec.describe FoldersController, type: :controller do
   describe '#show' do
     it 'should return folder items' do
       folder = FactoryBot.create(:folder)
-      audio_file = FactoryBot
+      audio_file = FactoryBot.create(:audio_file)
+
+      folder.audio_files.push(audio_file)
+      folder.save
+
+  
