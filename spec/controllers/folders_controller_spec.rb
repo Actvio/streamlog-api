@@ -42,4 +42,5 @@ RSpec.describe FoldersController, type: :controller do
       folder.audio_files.push(audio_file)
       folder.save
 
-  
+      get :show, params: {id: folder.id}
+      res = JSON.parse(response.body)
