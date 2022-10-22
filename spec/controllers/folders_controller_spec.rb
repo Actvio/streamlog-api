@@ -44,3 +44,7 @@ RSpec.describe FoldersController, type: :controller do
 
       get :show, params: {id: folder.id}
       res = JSON.parse(response.body)
+
+      data = res
+      expect(data['folder_items'].length).to eq(1)
+      expect(da
