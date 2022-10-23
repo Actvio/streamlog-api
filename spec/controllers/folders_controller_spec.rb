@@ -47,4 +47,5 @@ RSpec.describe FoldersController, type: :controller do
 
       data = res
       expect(data['folder_items'].length).to eq(1)
-      expect(da
+      expect(data['folder_items'].first['item_id']).to eq(audio_file.id)
+      expect(data['folder_items'].firs
