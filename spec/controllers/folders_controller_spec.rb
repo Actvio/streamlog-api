@@ -57,4 +57,6 @@ RSpec.describe FoldersController, type: :controller do
   end
 
   describe '#create' do
-    it 'should 
+    it 'should create a folder' do
+      post :create, params: {folder: {name: 'Folder 1'}}
+      res = J
