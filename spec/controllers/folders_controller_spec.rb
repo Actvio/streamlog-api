@@ -59,4 +59,6 @@ RSpec.describe FoldersController, type: :controller do
   describe '#create' do
     it 'should create a folder' do
       post :create, params: {folder: {name: 'Folder 1'}}
-      res = J
+      res = JSON.parse(response.body)
+      expect(res['id']).to eq(Folder.last.id)
+ 
