@@ -61,4 +61,9 @@ RSpec.describe FoldersController, type: :controller do
       post :create, params: {folder: {name: 'Folder 1'}}
       res = JSON.parse(response.body)
       expect(res['id']).to eq(Folder.last.id)
- 
+      expect(res['user_id']).to eq(@user.id)
+    end
+  end
+
+  describe '#update' do
+    it 'should
