@@ -67,4 +67,7 @@ RSpec.describe FoldersController, type: :controller do
 
   describe '#update' do
     it 'should update folder attributes' do
-      folder = FactoryBot.create(:folder, user: @user
+      folder = FactoryBot.create(:folder, user: @user)
+
+      put :update, params: {id: folder.id, folder: {name: 'Folder 1'}}
+    
