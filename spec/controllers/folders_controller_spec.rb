@@ -74,4 +74,6 @@ RSpec.describe FoldersController, type: :controller do
       expect(res['name']).to eq('Folder 1')
     end
 
-    
+    it 'should update audio files' do
+      folder = FactoryBot.create(:folder, user: @user)
+  
