@@ -70,4 +70,8 @@ RSpec.describe FoldersController, type: :controller do
       folder = FactoryBot.create(:folder, user: @user)
 
       put :update, params: {id: folder.id, folder: {name: 'Folder 1'}}
+      res = JSON.parse(response.body)
+      expect(res['name']).to eq('Folder 1')
+    end
+
     
