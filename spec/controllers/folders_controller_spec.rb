@@ -76,4 +76,7 @@ RSpec.describe FoldersController, type: :controller do
 
     it 'should update audio files' do
       folder = FactoryBot.create(:folder, user: @user)
-  
+      audio_file1 = FactoryBot.create(:audio_file)
+      audio_file2 = FactoryBot.create(:audio_file)
+
+    
