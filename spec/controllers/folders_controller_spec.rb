@@ -79,4 +79,7 @@ RSpec.describe FoldersController, type: :controller do
       audio_file1 = FactoryBot.create(:audio_file)
       audio_file2 = FactoryBot.create(:audio_file)
 
-    
+      folder.audio_files.push(audio_file1)
+      folder.save
+
+      put :update,
