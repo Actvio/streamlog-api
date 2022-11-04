@@ -82,4 +82,6 @@ RSpec.describe FoldersController, type: :controller do
       folder.audio_files.push(audio_file1)
       folder.save
 
-      put :update,
+      put :update, params: {id: folder.id, folder: {
+        folder_items_attributes: [
+     
