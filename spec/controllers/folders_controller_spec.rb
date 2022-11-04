@@ -84,4 +84,7 @@ RSpec.describe FoldersController, type: :controller do
 
       put :update, params: {id: folder.id, folder: {
         folder_items_attributes: [
-     
+          {item_type: AudioFile.name, item_id: audio_file2.id}
+        ]
+      }}
+      r
