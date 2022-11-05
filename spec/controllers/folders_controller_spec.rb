@@ -87,4 +87,7 @@ RSpec.describe FoldersController, type: :controller do
           {item_type: AudioFile.name, item_id: audio_file2.id}
         ]
       }}
-      r
+      res = JSON.parse(response.body)
+      expect(res['folder_items'].length).to eq(2)
+
+      put :update, par
