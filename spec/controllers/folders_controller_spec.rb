@@ -90,4 +90,6 @@ RSpec.describe FoldersController, type: :controller do
       res = JSON.parse(response.body)
       expect(res['folder_items'].length).to eq(2)
 
-      put :update, par
+      put :update, params: {id: folder.id, folder: {
+        folder_items_attributes: [
+          {id: 
