@@ -95,4 +95,8 @@ RSpec.describe FoldersController, type: :controller do
           {id: res['folder_items'].first['id'], _destroy: true}
         ]
       }}
-      res = JSON.parse(r
+      res = JSON.parse(response.body)
+      expect(res['folder_items'].length).to eq(1)
+    end
+  end
+end
