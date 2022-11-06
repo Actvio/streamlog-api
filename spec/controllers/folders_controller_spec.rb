@@ -92,4 +92,7 @@ RSpec.describe FoldersController, type: :controller do
 
       put :update, params: {id: folder.id, folder: {
         folder_items_attributes: [
-          {id: 
+          {id: res['folder_items'].first['id'], _destroy: true}
+        ]
+      }}
+      res = JSON.parse(r
