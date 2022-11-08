@@ -107,3 +107,23 @@ RSpec.describe ProjectsController, type: :controller do
       project.save
 
       put :add_clip, params: {id: project.id, clip_id: clip2.id}
+      res = JSON.parse(response.body)
+      expect(res['project_attachments'].length).to eq(2)
+    end
+  end
+
+  describe '#remove_clip' do
+    it 'should remove the clip' do
+      project = FactoryBot.create(:project, user: @user)
+      clip1 = FactoryBot.create(:clip)
+      clip2 = FactoryBot.create(:clip)
+
+      project.clips = [clip1, clip2]
+      project.save
+
+      put :remove_clip, params: {id: project.id, clip_id: clip2.id}
+      res = JSON.parse(response.body)
+      expect(res['project_attachments'].length).to eq(1)
+    end
+  end
+end
