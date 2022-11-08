@@ -1,3 +1,6 @@
 FactoryBot.define do
   factory :audio_file do
-    user { FactoryBot
+    user { FactoryBot.create(:user) }
+  end
+
+end
