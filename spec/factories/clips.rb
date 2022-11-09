@@ -1,3 +1,5 @@
 FactoryBot.define do
   factory :clip do
-    audio
+    audio_file { FactoryBot.create(:audio_file) }
+    user { FactoryBot.create(:user) }
+    na
