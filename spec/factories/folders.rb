@@ -1,3 +1,6 @@
 FactoryBot.define do
   factory :folder do
-    name { 
+    name { 'Sample Folder'}
+    user { FactoryBot.create(:user) }
+  end
+end
