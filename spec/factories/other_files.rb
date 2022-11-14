@@ -1,2 +1,5 @@
 FactoryBot.define do
-  facto
+  factory :other_file do
+    name { "MyString" }
+  end
+end
