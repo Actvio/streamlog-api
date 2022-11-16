@@ -1,3 +1,7 @@
 FactoryBot.define do
   factory :project do
-    n
+    name { 'Project name' }
+    user { FactoryBot.create(:user) }
+  end
+
+end
