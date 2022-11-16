@@ -1,2 +1,5 @@
 FactoryBot.define do
-  factory :proje
+  factory :project_attachment do
+    
+  end
+end
