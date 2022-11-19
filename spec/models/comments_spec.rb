@@ -7,4 +7,6 @@ RSpec.describe Comment, type: :model do
       audio_file = FactoryBot.create(:audio_file, user_id: user.id)
       comment = FactoryBot.create(:comment, user: user, commentable: audio_file)
 
-      expect(AudioFile.find(audio_file.id).comments.first.id).to 
+      expect(AudioFile.find(audio_file.id).comments.first.id).to be(comment.id)
+      expect(comment.audio_file.id).to be(audio_file.id)
+      expect(com
