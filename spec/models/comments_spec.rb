@@ -9,4 +9,7 @@ RSpec.describe Comment, type: :model do
 
       expect(AudioFile.find(audio_file.id).comments.first.id).to be(comment.id)
       expect(comment.audio_file.id).to be(audio_file.id)
-      expect(com
+      expect(comment.commentable.id).to be(audio_file.id)
+    end
+  end
+end
