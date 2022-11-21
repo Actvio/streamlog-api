@@ -26,3 +26,23 @@ RSpec.describe Folder, type: :model do
         expect(a.folders.first.id).to eq(f.id)
         expect(f.items.first.id).to eq(a.id)
         expect(f.audio_files.first.id).to eq(a.id)
+    end
+
+    it 'should add_item and remove_item' do
+        a = FactoryBot.create(:audio_file)
+        f = FactoryBot.create(:folder)
+
+        f.add_item(a)
+
+        expect(a.folders.first.id).to eq(f.id)
+        expect(f.items.first.id).to eq(a.id)
+        expect(f.audio_files.first.id).to eq(a.id)
+
+        f.remove_item(a)
+
+        expect(a.folders.first).to eq(nil)
+        expect(f.items.first).to eq(nil)
+        expect(f.audio_files.first).to eq(nil)
+    end
+  end
+end
