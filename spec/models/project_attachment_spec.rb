@@ -6,4 +6,6 @@ RSpec.describe ProjectAttachment, type: :model do
       @project = FactoryBot.create(:project)
     end
 
-    it 'should be 
+    it 'should be able to attach clips' do
+      clip = FactoryBot.create(:clip)
+      @project.clips.p
