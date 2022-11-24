@@ -11,4 +11,8 @@ RSpec.describe ProjectAttachment, type: :model do
       @project.clips.push(clip)
 
       p = Project.find(@project.id)
-      expect(p.clips.first.id).to 
+      expect(p.clips.first.id).to eq(clip.id)
+    end
+
+    it 'should be able to attach audio files' do
+      audio_file 
