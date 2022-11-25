@@ -15,4 +15,5 @@ RSpec.describe ProjectAttachment, type: :model do
     end
 
     it 'should be able to attach audio files' do
-      audio_file 
+      audio_file = FactoryBot.create(:audio_file)
+      @project.audio_files.push(audio_file)
