@@ -19,4 +19,7 @@ RSpec.describe ProjectAttachment, type: :model do
       @project.audio_files.push(audio_file)
 
       p = Project.find(@project.id)
-      expect(p.audio_files.first.id).t
+      expect(p.audio_files.first.id).to eq(audio_file.id)
+    end
+  end
+end
