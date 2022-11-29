@@ -1,3 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Project, t
+RSpec.describe Project, type: :model do
+  describe 'adding clips' do
+
+    before (:each) do
+      @user = FactoryBot.create(:user)
+ 
