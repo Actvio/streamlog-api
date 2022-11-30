@@ -5,4 +5,7 @@ RSpec.describe Project, type: :model do
 
     before (:each) do
       @user = FactoryBot.create(:user)
- 
+      @project = FactoryBot.create(:project, user: @user)
+    end
+
+    it 'shou
