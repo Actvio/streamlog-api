@@ -8,4 +8,7 @@ RSpec.describe Project, type: :model do
       @project = FactoryBot.create(:project, user: @user)
     end
 
-    it 'shou
+    it 'should save a clip in its collection' do
+      clip = FactoryBot.create(:clip)
+
+      @project
