@@ -15,4 +15,8 @@ RSpec.describe Project, type: :model do
       @project.save
 
       p = Project.find(@project.id)
-      expect(
+      expect(p.clips.length).to eq(1)
+    end
+
+    it 'should accept clips as attributes' do
+      clip =
