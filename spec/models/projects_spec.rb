@@ -11,4 +11,8 @@ RSpec.describe Project, type: :model do
     it 'should save a clip in its collection' do
       clip = FactoryBot.create(:clip)
 
-      @project
+      @project.clips.push(clip)
+      @project.save
+
+      p = Project.find(@project.id)
+      expect(
