@@ -19,4 +19,8 @@ RSpec.describe Project, type: :model do
     end
 
     it 'should accept clips as attributes' do
-      clip =
+      clip = FactoryBot.create(:clip)
+
+      @project.update({
+        project_attachments_attributes: [
+    
