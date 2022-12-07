@@ -23,4 +23,8 @@ RSpec.describe Project, type: :model do
 
       @project.update({
         project_attachments_attributes: [
-    
+          {item_type: Clip.name, item_id: clip.id},
+        ],
+      })
+
+      p = Pr
