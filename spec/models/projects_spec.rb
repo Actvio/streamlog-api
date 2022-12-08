@@ -27,4 +27,7 @@ RSpec.describe Project, type: :model do
         ],
       })
 
-      p = Pr
+      p = Project.find(@project.id)
+      expect(p.clips.length).to eq(1)
+
+      
