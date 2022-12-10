@@ -30,4 +30,6 @@ RSpec.describe Project, type: :model do
       p = Project.find(@project.id)
       expect(p.clips.length).to eq(1)
 
-      
+      clip2 = FactoryBot.create(:clip)
+      @project.update({
+        project_attachments_attrib
