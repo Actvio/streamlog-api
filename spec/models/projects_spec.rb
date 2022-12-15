@@ -42,4 +42,9 @@ RSpec.describe Project, type: :model do
 
       @project.update({
         project_attachments_attributes: [
-          {id: @project.project_att
+          {id: @project.project_attachments.first.id, _destroy: true},
+        ],
+      })
+
+      p = Project.find(@project.id)
+  
