@@ -32,4 +32,9 @@ RSpec.describe Project, type: :model do
 
       clip2 = FactoryBot.create(:clip)
       @project.update({
-        project_attachments_attrib
+        project_attachments_attributes: [
+          {item_type: Clip.name, item_id: clip.id},
+        ],
+      })
+
+      p = Proj
