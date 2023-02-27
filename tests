@@ -1,2 +1,2 @@
 # docker-compose -f docker-compose.test.yml run --rm rails bash -c 'bundle exec rspec "$@"'
-docker-compose
+docker-compose -f docker-compose.test.yml run --rm rails bash -c 'rails db:drop db:create db:migrate;
