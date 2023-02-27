@@ -11,4 +11,5 @@ two:
   user: two
   provider: MyString
   token: MyString
- 
+  refresh_token: MyString
+  expires_at: 2019-11-04 10:56:15
