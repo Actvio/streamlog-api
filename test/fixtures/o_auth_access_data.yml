@@ -1,4 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  
+  user: one
+  provider: MyString
+  token: MyString
+  refresh_token: MyString
+  ex
